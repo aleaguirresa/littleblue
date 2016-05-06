@@ -1,25 +1,50 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
 	padding-top: 70px;
 	min-height: 900px; /* Para testear el navbar fixed */
 	font-family: 'Lilita One';
+	-webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.collapse-body {
+	margin-left: 266px;
+}
+
+.collapse-body nav.navbar-default {
+	margin-left: 266px;
 }
 
 nav.navbar-default {
 	background: #06c;
 	height: 70px;
+	width: 100%;
+	-webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 a.navbar-brand {
     padding: 5px 0;
 }
 
-a.navbar-brand img {
+a.navbar-brand .brand-small {
     margin-left: 10px;
+    height: 60px;
 }
 
 #desktop-menu {
+	display: none;
 	float: right;
-    padding-top: 15px;
+    padding-top: 17px;
 }
 
 #desktop-menu li {
@@ -35,8 +60,8 @@ a.navbar-brand img {
 	color: #fff;
 }
 
-#desktop-menu a:hover,
-#desktop-menu a:focus {
+a:hover,
+a:focus {
 	text-decoration: none;
 }
 
@@ -55,5 +80,89 @@ div.header-controls {
 }
 
 .header-controls a:first-child i {
-    border-right: none;
+    border-right: none;file:///C:/Users/aalej/Desktop/little%20eval/littleblue/layout.html#
+}
+
+#side-menu {
+	background: url('../img/menu-bg.png');
+    font-family: 'Roboto', sans-serif;
+    width: 266px;
+    position: fixed;
+    top: 0;
+    margin-left: -266px;
+    z-index: 1030;
+    height: 100%;
+    overflow: auto;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#side-menu img {
+	padding-left: 14px;
+}
+
+.hr {
+    margin-bottom: 0;
+    height: 30px;
+    background: #191b1c;
+    border: none;
+}
+
+.sidebar-navigation {
+	padding: 0;
+}
+
+.sidebar-navigation li {
+    display: block;
+    list-style: none;
+    line-height: 60px;
+    border-top: solid 1px rgba(255,255,255,0.05);
+    border-bottom: solid 1px rgba(0,0,0,0.2);
+    margin-bottom: 0px;
+}
+
+.sidebar-navigation:first-child li {
+	border-top: none;
+}
+
+.sidebar-navigation:last-child li {
+	border-bottom: none;
+}
+
+.sidebar-navigation li a {
+	color: #fff;
+	padding: 0 20px;
+	display: block;
+	padding: 0 29px 0 32px;
+}
+
+.sidebar-navigation li a > i {
+	padding-right: 20px;
+}
+
+.sidebar-navigation li span {
+    float: right;
+}
+
+.sidebar-navigation li span i {
+    font-size: 8px;
+}
+
+ul.dropdown-menu {
+    position: inherit;
+    background: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+
+/* MEDIA START */
+
+@media screen and (min-width: 1200px) {
+	#desktop-menu {
+		display: block;
+	}
 }

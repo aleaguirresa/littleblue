@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 
 	<title>Little Blue - Alejo A.S.</title>
 
@@ -8,36 +9,63 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
-
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-		<a class="navbar-brand" href="#">
-	        <img alt="Brand" src="img/LB-150pxB.png">
-	    </a>
+	<a class="navbar-brand" href="#">
+        <img class="brand-small" alt="Brand" src="img/LB-150pxB.png">
+    </a>
 
-	    <div class="header-controls">
-			<a href="#" class="open-more"><i class="fa fa-pencil"></i></a>
-			<a href="#" class="open-slide"><i class="fa fa-envelope"></i></a>
-			<a href="#" class="open-menu"><i class="fa fa-navicon"></i></a>
-		</div>
+    <div class="header-controls">
+		<a href="#" class="open-more"><i class="fa fa-pencil"></i></a>
+		<a href="#" class="open-slide"><i class="fa fa-envelope"></i></a>
+		<a href="#" class="open-menu"><i class="fa fa-navicon"></i></a>
+	</div>
 
-	    <ul id="desktop-menu">
-			<li><a href="#">Inicio </a></li>
-			<li><a href="#">Cat&aacute;logo</a></li>
-			<li><a href="#">Arm&aacute; tu buzo</a></li>
-			<li><a href="#">Nosotros</a></li>
-			<li><a href="#">&#191;Consultas?</a></li>
-			<li><a href="#">&#161;Gracias!</a></li>
-		</ul>
+    <ul id="desktop-menu">
+		<li><a href="#">Inicio </a></li>
+		<li><a href="#">Cat&aacute;logo</a></li>
+		<li><a href="#">Arm&aacute; tu buzo</a></li>
+		<li><a href="#">Nosotros</a></li>
+		<li><a href="#">&#191;Consultas?</a></li>
+		<li><a href="#">&#161;Gracias!</a></li>
+	</ul>
+</nav>
+
+<div class="menu-wrapper">
+	
+</div>
+
+<nav id="side-menu" class="side-menu">
+	<a class="side-nav-brand" href="#">
+        <img alt="Brand" src="img/LB-150pxB.png">
+	</a>
+	<div class="hr"></div>
+	<ul class="sidebar-navigation">
+		<li><a href="#"><i class="fa fa-home"></i> Inicio <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-camera"></i> Cat&aacute;logo <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-pencil"></i> Arm&aacute; tu buzo <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-paper-plane"></i> Ped&iacute; tu buzo <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-flash"></i> Sobre Little <span>&#8226;</span></a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-comment"></i>&#191;Consultas?<span><i class="fa fa-plus"></i></a></span>
+			<ul class="dropdown-menu">
+				<li><a href="#"><i class="fa fa-angle-right"></i>Clientes<span>&#8226;</span></a></li>
+				<li><a href="#"><i class="fa fa-angle-right"></i>Todav&iacute;a no soy cliente<span>&#8226;</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><i class="fa fa-hashtag"></i> &#161;Gracias! <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-external-link"></i> Mi Cuenta Blue <span>&#8226;</span></a></li>
+	</ul>
 </nav>
 
 	<h1>Hello, World!</h1>
-retomo
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
