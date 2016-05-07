@@ -23,15 +23,10 @@ $("body").click(function(event) {
 });
 
 
-$(function(){
-  $("#navbar-loader").load("controls/navbar.html"); 
-});
-
-
 $('.owl-carousel').owlCarousel({
     loop:true,
     dots: false,
-    margin:10,
+    margin:0,
     nav:true,
     responsive:{
         0:{
@@ -58,7 +53,7 @@ $(window).on("resize", function () {
   }, 200);
 }).resize();
 
-$('.item img').each(function() {
+$('.img-carousel').each(function() {
   var imgWidth = $(this).width();
   var imgHeight = $(this).height();
   if (imgWidth > imgHeight) {
@@ -72,6 +67,18 @@ $('.item img').each(function() {
 $(function() {
     $('.img-carousel').on('click', function() {
       $('.imagepreview').attr('src', $(this).attr('src'));
-      $('#imagemodal').modal('show');   
-    });   
+      $('#imagemodal').modal('show');
+    });
+    $('.thumbs').on('click', function() {
+      $('.imagepreview').attr('src', $(this).attr('src'));
+      $('#imagemodal').modal('show');
+    });
+});
+
+$("body").click(function(event) {
+  if ($(event.target).attr('class') != 'thumbs' && $(event.target).attr('class') != 'imagepreview' && $(event.target).attr('class') != 'img-carousel') {
+    $('#imagemodal').modal('hide');
+  } else {
+    
+  }
 });

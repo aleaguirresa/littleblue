@@ -3,6 +3,7 @@
 }
 
 body {
+    min-height: 100vh;
 	padding-top: 70px;
 	font-family: 'Lilita One';
 	-webkit-transition: all .4s ease-in-out;
@@ -215,6 +216,13 @@ ul.dropdown-menu {
     transition: all 450ms ease;
 }
 
+.dropdown-menu > li > a {
+    font-size: 11px;
+    padding-left: 75px !important;
+    color: #7e7e7e !important;
+}
+
+
 .menu-wrapper {
     text-align: center;
     padding: 20px;
@@ -307,8 +315,8 @@ a.dino span {
     text-align: center;
     font-size: 3vw;
     margin: 0;
-    width: 50%;
-    left: 25%;
+    width: 100%;
+    left: 0;
     top: -6.5vw;
 }
 
@@ -322,9 +330,11 @@ a.dino span {
     margin: 0;
 }
 
-#collections .row > div {
+#collections .row > div,
+.row.gray div > div  {
     text-align: center;
     margin-bottom: 0.5em;
+    padding: 0 0.25em;
 }
 
 #collections .row > div a {
@@ -346,31 +356,33 @@ a.dino span {
 /* SHOW */
 
 #collection-show {
-    padding-top: 20px;
+    padding: 0px;
     width: 100%;
+}
+
+#collection-show .youtube-vid {
+    padding: 0;
 }
 
 #collection-show h2 {
     text-transform: uppercase;
     color: #f09;
-    margin-top: 0;
+    margin-top: 10px;
+    text-align: center;
 }
 
 #collection-show p {
     font-size: 18px;
+    text-align: justify;
+    padding: 5px;
 }
 
 .owl-carousel {
-    width: 85% !important;
+    width: 94% !important;
 }
 
 .owl-item {
-    border: 3px solid transparent;
     overflow: hidden;
-}
-
-.owl-item:hover {
-    border: 3px solid #f09;
 }
 
 .owl-item .item {
@@ -384,7 +396,7 @@ a.dino span {
 
 .owl-controls {
     position: absolute;
-    right: -10%;
+    right: 0;
     top: 0;
     height: 100%;
     width: 6%;
@@ -416,10 +428,7 @@ a.dino span {
 .gray h3 {
     color: #06c;
     text-transform: uppercase;
-}
-
-.row.gray div > div {
-    margin-bottom: 0.5em;
+    margin-bottom: 30px;
 }
 
 .row.gray div > div a {
@@ -438,17 +447,102 @@ a.dino span {
     font-size: 3vw;
 }
 
+.modal-dialog {
+    text-align: center;
+    width: auto;
+}
+
+.modal-content {
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-body img.imagepreview {
+    max-height: 67vh;
+    width: auto;
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.modal-body .thumbwrap {
+    margin: 10px 0;
+}
+
+.modal-body .thumbdiv {
+    display: inline-block;
+    width: 123px;
+    height: 123px;
+    overflow: hidden;
+    position: relative;
+    max-width: 13vw;
+    max-height: 13vw;
+}
+
+.modal-body img.thumbs {
+    height: 220px;
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
 /* MEDIA START */
 
 @media (min-width: 768px) {
     #headerwrap > div > h2{
-        width: 100%;
-        left: 0;
         top: -5vw;
     }
 
-    #collections .row > div {
+    #collections .row > div,
+    #collection-show .youtube-vid {
         padding: 0 15px;
+    }
+
+    #collection-show {
+        padding: 20px;
+    }
+
+    #collection-show h2 {
+        text-align: initial;
+        margin-top: 0;
+        font-size: 37px;
+    }
+
+    .owl-carousel {
+        width: 85% !important;
+    }
+
+    .owl-item {
+        border: 3px solid transparent;
+    }
+
+    .owl-item:hover {
+        border: 3px solid #f09;
+    }
+
+    .owl-controls {
+        right: -10%
+    }
+
+    img.imagepreview {
+        height: 350px;
+    }
+
+    .modal-body .thumbwrap {
+        margin-top: 40px;
+    }
+
+    .modal-body .thumbdiv {
+        margin: 0 5px;
     }
 }
 
@@ -459,7 +553,15 @@ a.dino span {
 
     #collection-show > .row {
         display: flex;
-        align-items: center;
+    }
+
+    #collection-show .row:last-child > div {
+        position: relative;
+    }
+
+    .owl-carousel {
+        position: absolute !important;
+        bottom: 0;
     }
 
     .row.gray div > div span {

@@ -14,7 +14,74 @@
 
 </head>
 <body>
-<div id="navbar-loader"></div>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<a class="navbar-brand" href="#">
+        <img class="brand-small" alt="Brand" src="img/LB-150pxB.png">
+    </a>
+
+    <div class="header-controls">
+		<a href="#"><i class="fa fa-pencil"></i></a>
+		<a href="#" class="dino-open" onclick="return false"><i class="fa fa-envelope"></i></a>
+		<a href="#" class="open-menu" onclick="return false"><i class="fa fa-navicon"></i></a>
+	</div>
+
+    <ul id="desktop-menu">
+		<li><a href="layout.html">Inicio </a></li>
+		<li><a href="vista-1.html">Cat&aacute;logo</a></li>
+		<li><a href="#">Arm&aacute; tu buzo</a></li>
+		<li><a href="#">Nosotros</a></li>
+		<li><a href="#" class="dino-open" onclick="return false">&#191;Consultas?</a></li>
+		<li><a href="#">&#161;Gracias!</a></li>
+	</ul>
+</nav>
+
+<header class="menu-wrapper hiddendino">
+	<em><i class="fa fa-question-circle"></i>&#161;Dejanos ayudarte! Pero primero:</em>
+	<div class="menu">
+		<div id="dinos-wrapper">
+			<h2>&#191;Ya sos cliente?</h2>
+			<div class="container">
+				<div class="col-md-3 col-xs-6 col-md-offset-3">
+					<a href="#">
+						<img src="img/dino-si.png" class="img-responsive">
+						<span>SI</span>
+					</a>
+				</div>
+				<div class="col-md-3 col-xs-6">
+					<a href="#">
+						<img src="img/dino-no.png" class="img-responsive">
+						<span>NO</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<nav id="side-menu" class="side-menu">
+	<div class="overlay">
+	</div>
+	<a class="side-nav-brand" href="#">
+        <img alt="Brand" src="img/LB-150pxB.png">
+	</a>
+	<div class="hr"></div>
+	<ul class="sidebar-navigation">
+		<li><a href="layout.html"><i class="fa fa-home"></i> Inicio <span>&#8226;</span></a></li>
+		<li><a href="vista-1.html"><i class="fa fa-camera"></i> Cat&aacute;logo <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-pencil"></i> Arm&aacute; tu buzo <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-paper-plane"></i> Ped&iacute; tu buzo <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-flash"></i> Sobre Little <span>&#8226;</span></a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-comment"></i>&#191;Consultas?<span><i class="fa fa-plus"></i></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="#"><i class="fa fa-angle-right"></i>Clientes<span>&#8226;</span></a></li>
+				<li><a href="#"><i class="fa fa-angle-right"></i>Todav&iacute;a no soy cliente<span>&#8226;</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><i class="fa fa-hashtag"></i> &#161;Gracias! <span>&#8226;</span></a></li>
+		<li><a href="#"><i class="fa fa-external-link"></i> Mi Cuenta Blue <span>&#8226;</span></a></li>
+	</ul>
+</nav>
 	<h1>Hello, World!</h1>
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
