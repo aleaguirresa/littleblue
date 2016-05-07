@@ -4,7 +4,6 @@
 
 body {
 	padding-top: 70px;
-    padding-bottom: 20px;
 	font-family: 'Lilita One';
 	-webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
@@ -225,7 +224,7 @@ ul.dropdown-menu {
     border-bottom: solid 4px #032F70;
     position: fixed;
     background: #fff;
-    z-index: 1;
+    z-index: 2;
     -webkit-transition: all 1.45s ease;
     -moz-transition: all 1.45s ease;
     -ms-transition: all 1.45s ease;
@@ -294,6 +293,7 @@ a.dino span {
     width: 100%;
     height: 0;
     padding-top: 11.64%;
+    margin-bottom: 2vw;
 }
 
 #headerwrap > div {
@@ -312,14 +312,19 @@ a.dino span {
     top: -6.5vw;
 }
 
-#collections .row > div,
-#headerwrap {
-    margin-bottom: 2vw;
+
+#collections,
+#collection-show {
+    padding-bottom: 20px;
+}
+
+#collections .row {
+    margin: 0;
 }
 
 #collections .row > div {
     text-align: center;
-    padding: 0 2px;
+    margin-bottom: 0.5em;
 }
 
 #collections .row > div a {
@@ -340,6 +345,11 @@ a.dino span {
 
 /* SHOW */
 
+#collection-show {
+    padding-top: 20px;
+    width: 100%;
+}
+
 #collection-show h2 {
     text-transform: uppercase;
     color: #f09;
@@ -352,6 +362,24 @@ a.dino span {
 
 .owl-carousel {
     width: 85% !important;
+}
+
+.owl-item {
+    border: 3px solid transparent;
+    overflow: hidden;
+}
+
+.owl-item:hover {
+    border: 3px solid #f09;
+}
+
+.owl-item .item {
+    height: inherit;
+}
+
+.owl-carousel .owl-item .item img {
+    width: auto;
+    cursor: pointer;
 }
 
 .owl-controls {
@@ -371,21 +399,43 @@ a.dino span {
 }
 
 .owl-next {
-    display: block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 100%;
-    color: #fff;
-    width: 12px;
-    background: #f09;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    background: url('../img/REBEL/more.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
-.owl-next::before {
-    top: 40%;
+.row.gray {
+    background: #CDCDCD;
+    margin: 0;
+    margin-top: 15px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.gray h3 {
+    color: #06c;
+    text-transform: uppercase;
+}
+
+.row.gray div > div {
+    margin-bottom: 0.5em;
+}
+
+.row.gray div > div a {
+    display: block;
+    position: relative;
+}
+
+.row.gray div > div span {
     position: absolute;
-    content: "\f067";
+    top: 80%;
+    text-transform: uppercase;
+    color: #fff;
+    width: 100%;
+    left: 0;
+    padding: 0.6vw;
+    font-size: 3vw;
 }
 
 /* MEDIA START */
@@ -406,6 +456,16 @@ a.dino span {
     #collections .row > div span {
         font-size: 1.5em;
     }
+
+    #collection-show > .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .row.gray div > div span {
+        font-size: 0.8em;
+        padding: 0.3vw 0;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -415,5 +475,10 @@ a.dino span {
 
     #collections .row > div span {
         font-size: 2em;
+    }
+
+    .row.gray div > div span {
+        font-size: 1.3em;
+        padding: 0;
     }
 }
