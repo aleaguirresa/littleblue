@@ -67,16 +67,17 @@ a:focus {
 
 div.header-controls {
 	float: right;
+    padding: 15px 0;
 }
 
 .header-controls a {
 	float: right;
+    border-right: dashed 1px #fff;
+    height: 40px;
 }
 
 .header-controls a i {
-    margin: 15px 0;
     padding: 12px 24px;
-    border-right: dashed 1px #fff;
 }
 
 .header-controls a:first-child i {
@@ -100,8 +101,12 @@ div.header-controls {
     transition: all .4s ease-in-out;
 }
 
-#side-menu > div {
+#side-menu div.overlay {
     background: #2b2b2b url('../img/home-about-overlay.png') 0 0 repeat;
+    height: inherit;
+    position: fixed;
+    width: inherit;
+    z-index: -1;
 }
 
 #side-menu img {
@@ -140,6 +145,8 @@ div.header-controls {
 
 .sidebar-navigation li a > i {
 	padding-right: 20px;
+    font-size: 16px;
+    color: #bcbdbd;
 }
 
 .sidebar-navigation li span {
@@ -194,6 +201,86 @@ li.open ul.dropdown-menu li {
     color: #fff;
     text-decoration: none;
     background-color: rgba(255,255,255,0.05);
+}
+
+ul.dropdown-menu {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 250ms ease;
+    display: block;
+}
+
+.open ul.dropdown-menu {
+    max-height: 480px;
+    transition: all 450ms ease;
+}
+
+.menu-wrapper {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+    top: 70px;
+    border-bottom: solid 4px #032F70;
+    position: fixed;
+    background: #fff;
+    -webkit-transition: all 1.45s ease;
+    -moz-transition: all 1.45s ease;
+    -ms-transition: all 1.45s ease;
+    -o-transition: all 1.45s ease;
+    transition: all 1.45s ease;
+}
+
+.menu-wrapper.hiddendino {
+    top: -350px;
+}
+
+#dinos-wrapper {
+    margin: auto;
+}
+
+#dinos-wrapper .container > div span {
+    display: block;
+}
+
+.menu-wrapper em {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    display: block;
+    font-size: 13px;
+    color: #666;
+    font-style: normal;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+.menu-wrapper em i {
+    padding-right: 10px;
+}
+
+.menu-wrapper h2 {
+    font-family: 'Lilita One';
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #f09;
+    font-size: 36px;
+}
+
+a.dino span {
+    font-size: 36px;
+}
+
+.fa-envelope {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all 250ms ease;
+}
+
+.fa-envelope.twist {
+    -ms-transform: rotate(360deg) !important;
+    -webkit-transform: rotate(360deg) !important;
+    transform: rotate(360deg) !important;
+    transition: all 250ms ease;
 }
 
 /* MEDIA START */
