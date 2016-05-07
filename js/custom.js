@@ -67,3 +67,11 @@ $('.item img').each(function() {
     $(this).width('100%');
   }
 });
+
+
+$(function() {
+    $('.img-carousel').on('click', function() {
+      $('.imagepreview').attr('src', $(this).attr('src'));
+      $('#imagemodal').modal('show');   
+    });   
+});
