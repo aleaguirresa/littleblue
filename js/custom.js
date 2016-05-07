@@ -10,3 +10,34 @@ $("body").click(function(event) {
 		$("body").removeClass("collapse-body")
   }
 });
+
+
+$(function(){
+  $("#navbar-loader").load("controls/navbar.html"); 
+});
+
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    dots: false,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:4
+        }
+    }
+})
+
+
+$(window).on("resize", function () {
+	var minHeight = 700;
+
+  $('.item img').each(function() {
+    minHeight = minHeight < $(this).height() ? minHeight : $(this).height();
+  });
+
+  $('.item').each(function() {
+    $(this).height(minHeight);
+  });
+}).resize();

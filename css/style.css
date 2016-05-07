@@ -4,6 +4,7 @@
 
 body {
 	padding-top: 70px;
+    padding-bottom: 20px;
 	font-family: 'Lilita One';
 	-webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
@@ -284,7 +285,7 @@ a.dino span {
     transition: all 250ms ease;
 }
 
-/* COLLECTION START */
+/* COLLECTION */
 
 #headerwrap {
     background: url('../img/HEAD.png');
@@ -335,6 +336,56 @@ a.dino span {
     left: 0;
     padding: 0.6vw;
     font-size: 3vw;
+}
+
+/* SHOW */
+
+#collection-show h2 {
+    text-transform: uppercase;
+    color: #f09;
+    margin-top: 0;
+}
+
+#collection-show p {
+    font-size: 18px;
+}
+
+.owl-carousel {
+    width: 85% !important;
+}
+
+.owl-controls {
+    position: absolute;
+    right: -10%;
+    top: 0;
+    height: 100%;
+    width: 6%;
+}
+
+.owl-controls div {
+    height: inherit;
+}
+
+.owl-prev {
+    display: none !important;
+}
+
+.owl-next {
+    display: block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 100%;
+    color: #fff;
+    width: 12px;
+    background: #f09;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.owl-next::before {
+    top: 40%;
+    position: absolute;
+    content: "\f067";
 }
 
 /* MEDIA START */
