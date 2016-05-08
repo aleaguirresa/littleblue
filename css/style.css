@@ -127,6 +127,31 @@ div.header-controls {
     transition: all .4s ease-in-out;
 }
 
+#side-menu-right h3 {
+    padding: 20px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#side-menu-right h3{
+    font-family: 'Lilita One';
+    font-size: 1.7em;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+#side-menu-right li > a {
+    padding: 0;
+    text-align: center;
+}
+
+#side-menu-right .img-buzo {
+    width: 65%;
+    display: inline-block;
+    padding: 0;
+}
+
 .collapse-body-left #side-menu-right {
     right: 0;
 }
