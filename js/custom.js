@@ -20,25 +20,14 @@ $(window).on("resize", function () {
 $("body").click(function(event) {
   if ($(event.target).parents('nav').attr('class') != 'side-menu' && $(event.target).attr('class') != 'side-menu') {
     if ($(event.target).attr('class') == 'open-menu' || $(event.target).parent().attr('class') == 'open-menu') {
-      $("body").addClass("collapse-body")
-      
-      delay(function(){
-        $('.owl-item').each(function() {
-          var itemWidth = $(this).width();
-          $(this).height(itemWidth);
-        });
-      }, 200);
-
+      $("body").addClass("collapse-body-right")
+      $("body").removeClass("collapse-body-left")
+    } else if ($(event.target).attr('class') == 'open-left' || $(event.target).parent().attr('class') == 'open-left') {
+      $("body").toggleClass("collapse-body-left")
+      $("body").removeClass("collapse-body-right")
     } else {
-      $("body").removeClass("collapse-body")
-      
-      delay(function(){
-        $('.owl-item').each(function() {
-          var itemWidth = $(this).width();
-          $(this).height(itemWidth);
-        });
-      }, 200);
-      
+      $("body").removeClass("collapse-body-right")
+      $("body").removeClass("collapse-body-left")
     }
   }
   if ($(event.target).parents('header').attr('class') != 'menu-wrapper' && $(event.target).attr('class') != 'menu-wrapper') {
