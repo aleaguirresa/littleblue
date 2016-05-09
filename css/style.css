@@ -4,8 +4,10 @@
 
 body {
     min-height: 100vh;
+    width: 100vw;
 	padding-top: 70px;
 	font-family: 'Lilita One';
+    overflow-x: hidden;
 	-webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
@@ -22,7 +24,7 @@ body {
 }
 
 .collapse-body-left {
-    margin-right: 266px;
+    margin-left: -266px;
 }
 
 .collapse-body-left nav.navbar-default {
@@ -384,7 +386,8 @@ a.dino span {
     padding-bottom: 20px;
 }
 
-#collections .row {
+#collections .row,
+#collection-show .row {
     margin: 0;
 }
 
@@ -450,6 +453,8 @@ a.dino span {
 .owl-carousel .owl-item .item img {
     width: auto;
     cursor: pointer;
+    min-width: 100%;
+    max-height: 150%;
 }
 
 .owl-controls {
@@ -507,7 +512,9 @@ a.dino span {
 
 .modal-dialog {
     text-align: center;
-    width: auto;
+    width: 100%;
+    margin: 0;
+    height: 100%
 }
 
 .modal-content {
@@ -515,28 +522,35 @@ a.dino span {
     box-shadow: none;
     border: none;
     border-radius: 0;
+    height: 100%;
 }
 
 .modal-body {
     padding: 0;
+    height: 100%;
+    position: relative;
 }
 
 .modal-body img.imagepreview {
-    max-height: 67vh;
+    max-height: 50vh;
     width: auto;
     display: block;
     margin: auto;
     max-width: 100%;
+    padding-top: 5vh;
 }
 
 .modal-body .thumbwrap {
     margin: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 20vh;
 }
 
 .modal-body .thumbdiv {
     display: inline-block;
-    width: 123px;
-    height: 123px;
+    width: 80px;
+    height: 80px;
     overflow: hidden;
     position: relative;
     max-width: 13vw;
@@ -551,6 +565,13 @@ a.dino span {
     top: 0;
     text-align: center;
     cursor: pointer;
+    min-width: 100%;
+    max-height: 150%;
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
 }
 
 /* MEDIA START */
@@ -592,7 +613,7 @@ a.dino span {
     }
 
     .owl-carousel {
-        width: 85% !important;
+        width: 92% !important;
     }
 
     .owl-item {
@@ -609,7 +630,7 @@ a.dino span {
     }
 
     .owl-controls {
-        right: -10%
+        right: -3%
     }
 
     img.imagepreview {
@@ -621,7 +642,6 @@ a.dino span {
     }
 
     .modal-body .thumbdiv {
-        margin: 0 5px;
         border: 3px solid transparent;
         -webkit-transition: all .4s ease-in-out;
         -moz-transition: all .4s ease-in-out;
@@ -648,6 +668,10 @@ a.dino span {
         position: relative;
     }
 
+    #collection-show p {
+        font-size: 15px;
+    }
+
     .owl-carousel {
         position: absolute !important;
         bottom: 0;
@@ -666,6 +690,10 @@ a.dino span {
 
     #collections .row > div span {
         font-size: 2em;
+    }
+
+    #collection-show p {
+        font-size: 18px;
     }
 
     .row.gray div > div span {

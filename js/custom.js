@@ -1,19 +1,31 @@
-var delay = (function(){
-  var timer = 0;
-  return function(callback, ms){
-    clearTimeout (timer);
-    timer = setTimeout(callback, ms);
+$('.owl-item').ready(function() {
+  $('.owl-item').each(function() {
+    var itemWidth = $(this).width();
+    $(this).height(itemWidth);
+  });
+});
+
+var waitForFinalEvent = (function () {
+  var timers = {};
+  return function (callback, ms, uniqueId) {
+    if (!uniqueId) {
+      uniqueId = "Don't call this twice without a uniqueId";
+    }
+    if (timers[uniqueId]) {
+      clearTimeout (timers[uniqueId]);
+    }
+    timers[uniqueId] = setTimeout(callback, ms);
   };
 })();
 
-$(window).on("resize", function () {
-  delay(function(){
-    $('.owl-item').each(function() {
-      var itemWidth = $(this).width();
-      $(this).height(itemWidth);
-    });
-  }, 200);
-}).resize();
+$(window).resize(function () {
+    waitForFinalEvent(function(){
+      $('.owl-item').each(function() {
+        var itemWidth = $(this).width();
+        $(this).height(itemWidth);
+      });
+    }, 500, "some unique string");
+});
 
 
 
@@ -50,7 +62,7 @@ $("body").click(function(event) {
 $('.owl-carousel').owlCarousel({
     loop:true,
     dots: false,
-    margin:0,
+    margin:1,
     nav:true,
     responsive:{
         0:{
@@ -59,16 +71,6 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
-$('.img-carousel').each(function() {
-  var imgWidth = $(this).width();
-  var imgHeight = $(this).height();
-  if (imgWidth > imgHeight) {
-    $(this).height('100%');
-  } else {
-    $(this).width('100%');
-  }
-});
-
 
 $(function() {
     $('.img-carousel').on('click', function() {
@@ -76,15 +78,15 @@ $(function() {
       $('#imagemodal').modal('show');
     });
     $('.thumbs').on('click', function() {
+      $('.imagepreview').hide();
       $('.imagepreview').attr('src', $(this).attr('src'));
       $('#imagemodal').modal('show');
+      $('.imagepreview').fadeIn();
     });
 });
 
 $("body").click(function(event) {
   if ($(event.target).attr('class') != 'thumbs' && $(event.target).attr('class') != 'imagepreview' && $(event.target).attr('class') != 'img-carousel') {
     $('#imagemodal').modal('hide');
-  } else {
-    
   }
 });
